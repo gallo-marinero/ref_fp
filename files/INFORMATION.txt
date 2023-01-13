@@ -1,0 +1,27 @@
+To run in command line, go to folder and:
+fp2k.exe FP_INPUT.pcr EXP_PATTERN.xye
+
+Parameter to refine from the sample
+ -0.05 - 0.05
+- Zero
+- SyCos
+- SySin
+ +-0.05
+- X (Fe1, P1, O1, O2, O3)
+- Y (O3)
+- Z (Fe1, P1, O1, O2, O3)
+ -0.1 - 1.4
+- Biso (Fe1, P1, O1, O2, O3, AL1) 
+ E-7 - E00
+- Scale (Must be POSITIVE)
+#NO - Bov (Must be POSITIVE)
+ 0.0 - 0.5
+- U (Must be POSITIVE)
+- Y (Must be POSITIVE)
++- 10%
+- a (cod-1101111.cif)
+- b (cod-1101111.cif)
+- c (cod-1101111.cif)
+- a=b=c (cod-4313206.cif)
+
+After you run the example FP_INPUT.prf file contains the simulated profile (1st col X-axis, 2nd col Y-axis)
