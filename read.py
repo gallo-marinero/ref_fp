@@ -103,6 +103,7 @@ with open(sample_f,'r') as f:
                 abc_temp['var_name']='abc'
                 abc_temp['search_name']='abc'
                 abc_temp['value']=a
+                abc_temp['cif']=curr_cif
 # Range is +-10%                
                 abc_temp['min']=a-(a*.1)
                 abc_temp['max']=a+(a*.1)
@@ -111,18 +112,21 @@ with open(sample_f,'r') as f:
                 abc_temp['var_name']='abc'
                 abc_temp['search_name']='a'
                 abc_temp['value']=a
+                abc_temp['cif']=curr_cif
                 abc_temp['min']=a-(a*.1)
                 abc_temp['max']=a+(a*.1)
                 abc.append(abc_temp.copy())
                 abc_temp['var_name']='abc'
                 abc_temp['search_name']='b'
                 abc_temp['value']=b
+                abc_temp['cif']=curr_cif
                 abc_temp['min']=b-(b*.1)
                 abc_temp['max']=b+(b*.1)
                 abc.append(abc_temp.copy())
                 abc_temp['var_name']='abc'
                 abc_temp['search_name']='c'
                 abc_temp['value']=c
+                abc_temp['cif']=curr_cif
                 abc_temp['min']=c-(c*.1)
                 abc_temp['max']=c+(c*.1)
                 abc.append(abc_temp.copy())
@@ -178,10 +182,10 @@ for i in range(len(opt_vrbls)):
         print('\n')
         opt_vrbls[i]=abc
 
-opt_vrbls=[zero,sysin,sycos,x_coord,y_coord,z_coord,biso_coord]
+opt_vrbls=[zero,sysin,sycos,x_coord,y_coord,z_coord,biso_coord,scale,u,y_u,abc]
 print('\n-----------\n')
 # Loop through all the simulations the user wants to run
-for i in range(1):
+for i in range(10):
 # Append the simulation number to each input filename
     sim_inp=os.path.join(os.getcwd(),'simulations/'+str(i+1)+'_'+sample_f)
     shutil.copy(os.path.join(os.getcwd(),sample_f),sim_inp)

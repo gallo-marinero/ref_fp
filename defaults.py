@@ -60,7 +60,7 @@ scale_temp={
         'cif' : 'cif',
         'value' : 0.0,
         'new_value' : 0.0,
-        'min' : 1E-07,
+        'min' : 1e-07,
         'max' : 0.0
 }
 u_temp={
