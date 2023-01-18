@@ -1,4 +1,4 @@
-import sys, os, shutil, defaults, write
+import sys, os, shutil, defaults, write,subprocess,calculate
 from importlib import import_module
 from defaults import *
 
@@ -8,7 +8,7 @@ full_vrbls=[zero,sycos,sysin,x_temp,y_temp,z_temp,biso_temp,scale_temp,\
 optimize='all'
 # sample_f: file with measured data
 # optimize: list of strings with the variables to optimize (lower case)'
-vrbls=['sample_f','optimize','x','y','z','biso','scale','u','y_u','abc']
+vrbls=['experiment_f','sample_f','optimize','x','y','z','biso','scale','u','y_u','abc']
 # Read input from file
 # Add path where code is executed to be able to load the input file as a module
 sys.path.append(os.getcwd())
@@ -182,11 +182,37 @@ for i in range(len(opt_vrbls)):
         print('\n')
         opt_vrbls[i]=abc
 
-opt_vrbls=[zero,sysin,sycos,x_coord,y_coord,z_coord,biso_coord,scale,u,y_u,abc]
-print('\n-----------\n')
+# Read and store the experimental values
+exp_point=[]
+exp_intensity=[]
+exp_std=[]
+with open(experiment_f,'r') as exp_f:
+    for line in exp_f:
+        line_split=line.split()
+        if len(line_split) == 3:
+            exp_point.append(float(line_split[0]))
+            exp_intensity.append(float(line_split[1]))
+            exp_std.append(float(line_split[2]))
+exp_f.close()
+prf=sample_f.split(".")[0]
+
+sim_folder=os.path.join(os.getcwd(),'simulations/')
+simulations=1
 # Loop through all the simulations the user wants to run
-for i in range(10):
+for i in range(simulations):
+    sim_point=[]
+    sim_intensity=[]
 # Append the simulation number to each input filename
-    sim_inp=os.path.join(os.getcwd(),'simulations/'+str(i+1)+'_'+sample_f)
+    sim_inp=os.path.join(sim_folder+str(i+1)+'_'+sample_f)
     shutil.copy(os.path.join(os.getcwd(),sample_f),sim_inp)
     write.create_inp(sim_inp,sample_f,opt_vrbls,cif_files)
+    subprocess.call(['fp2k', sim_inp, 'EXP_PATTERN'])
+    with open(os.path.join(sim_folder+str(i+1)+'_'+prf+'.prf')) as sim_f:
+        for line in sim_f:
+            line_split=line.split()
+            if len(line_split)==5:
+                sim_point.append(float(line_split[0]))
+                sim_intensity.append(float(line_split[1]))
+    sim_f.close()
+    chi=calculate.fig_merit(exp_point,exp_intensity,exp_std,sim_point,sim_intensity)
+

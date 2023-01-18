@@ -1,7 +1,7 @@
 import sys, os, shutil
 from random import uniform
 # Function to replace variables that appear only once in the input file
-def rep_zero(line_match,vrbls):
+def rep_zero(line_match,vrbls,ml_vars):
 # Loop over all these variables
     for k in ['Zero','SyCos','SySin']:
 # Retrieve them from vrbls and store them in var
@@ -11,15 +11,16 @@ def rep_zero(line_match,vrbls):
 # position. If the variable is not contained in vrbls, do nothing
             if k == 'Zero':
                 line_match[0]=str(round(uniform(var['min'],var['max']),5))
+                ml_vars.append(line_match[0])
             if k == 'SyCos':
                 line_match[2]=str(round(uniform(var['min'],var['max']),5))
+                ml_vars.append(line_match[2])
             if k == 'SySin':
                 line_match[4]=str(round(uniform(var['min'],var['max']),5))
-#    if vrbls['search_name']=='Scale':
-#        print('lalal')
+                ml_vars.append(line_match[4])
 # Transform the list into string, which is the new line 
     line_replace='   '.join(line_match)
-    return str(line_replace)+'\n'
+    return str(line_replace)+'\n',ml_vars 
 
 def rep_xyzbiso(line_match,list_vars):
     for i in list_vars:
@@ -75,13 +76,21 @@ def create_inp(sim_inp,ref,vrbls,cifs):
 # list_vars
     list_vars=[]
     dict_vars=[]
+    ml_vars=[]
+# ml_names contains the names as headers of the ml database                
+    ml_names=[]
     for i in range(len(vrbls)):
         if type(vrbls[i]) == list:
             list_vars.append(vrbls[i])
+            for j in range(len(vrbls[i])):
+# Save the names as headers of the ml database                
+                ml_names.append(vrbls[i][j]['var_name']+'_'+vrbls[i][j]['search_name'])
         elif type(vrbls[i]) == dict:
             dict_vars.append(vrbls[i])
+# Save the names as headers of the ml database                
+            ml_names.append(vrbls[i]['var_name'])
             
-    with open(sim_inp,'w') as sim_f, open(ref,'r') as ref_f:
+    with open(sim_inp,'w') as sim_f, open(ref,'r') as ref_f, open('ml.dat','w') as ml_f:
         for line in ref_f:
 # When Zero (and SySin and SyCos) line is found, replace the variables that are
 # dicts (stored in dict_vars) with function rep_zero
@@ -90,7 +99,8 @@ def create_inp(sim_inp,ref,vrbls,cifs):
                 if 'Zero' in line:
                     sim_f.write(line)
                     line_match=next(ref_f).split()
-                    sim_f.write(rep_zero(line_match,dict_vars))
+                    line_replace,ml_vars=rep_zero(line_match,dict_vars,ml_vars)
+                    sim_f.write(line_replace)
 # Avoid printing again the header '!  Zero...'                    
                     p=False
                 for j in cifs:
@@ -110,6 +120,7 @@ def create_inp(sim_inp,ref,vrbls,cifs):
                                 line_match[0]=str(uniform(k['min'],k['max']))
                                 line_replace='     '.join(line_match)
                                 sim_f.write(line_replace+'\n')
+                                ml_vars.append(line_match[0])
                                 p=False
                     elif '  U  ' in line and list_vars[i][0]['search_name']=='U':
                         sim_f.write(line)
@@ -154,3 +165,5 @@ def create_inp(sim_inp,ref,vrbls,cifs):
                             break
                 if p:
                     sim_f.write(line)
+    print(ml_names)
+    print(ml_vars)

@@ -1,3 +1,4 @@
+experiment_f='EXP_PATTERN.dat'
 sample_f='FP_INPUT.pcr'
 optimize='zero sycos sysin scale u y_u a b c x y z biso'
 x=['Fe1','P1','O1','O2','O3']

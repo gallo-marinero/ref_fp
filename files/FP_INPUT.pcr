@@ -1,10 +1,10 @@
 COMM  Phases extracted from file: 14LFPka_f00003.xye.buf
-! Files => DAT-file: .\EXP_PATTERN.xye,  PCR-file: .\FP_INPUT
+! Files => DAT-file: EXP_PATTERN,  PCR-file: FP_INPUT
 !Job Npr Nph Nba Nex Nsc Nor Dum Iwg Ilo Ias Res Ste Nre Cry Uni Cor Opt Aut
    2   7   2  30   1   0   1   0   0   0   0   1   1   0   0   0   0   0   1
 !
 !  Resolution file for Pattern#   1
-C:/Users/oarcelus/OneDrive - CIC energiGUNE/Desktop/testfullprofapp/LiFePO4/IRF_NOTOS_July2022_MR.irf
+/home/gallo/work/models_cic/ref-fp/files/IRF_NOTOS_July2022_MR.irf
 !Ipr Ppl Ioc Mat Pcr Ls1 Ls2 Ls3 NLI Prf Ins Rpa Sym Hkl Fou Sho Ana
    2   2   1   0   1   0   4   0   0   3  10  -1   0   0   0   0   0
 !
@@ -81,9 +81,9 @@ O3     O       0.16758  0.05245  0.28807  2.20591   1.00000   0   0   0    0
 !  Scale          Shape1      Bov      Str1      Str2      Str3   Strain-Model
  0.5045186E-03   0.00000   0.00000   0.00000   0.00000   0.00000       0
       11.00000     0.000     0.000     0.000     0.000     0.000
-!       U            V            W             X            Y         GauSiz      LorSiz    Size-Model
-     0.000000     0.000000     0.000000     0.000000     0.011974     0.000000     0.000000       0
-       381.00         0.00         0.00         0.00       401.00         0.00         0.00
+!       U         V          W           X          Y        GauSiz   LorSiz Size-Model
+   0.000000   0.000000   0.000000   0.000000   0.011974   0.000000   0.000000    0
+    381.000      0.000      0.000      0.000    401.000      0.000      0.000
 !     a          b         c        alpha      beta       gamma      #Cell Info
   10.324202   6.004724   4.689219  90.000000  90.000000  90.000000   
   341.00000  361.00000  371.00000    0.00000    0.00000    0.00000
@@ -107,9 +107,9 @@ AL1    Al      0.00000  0.00000  0.00000  3.66071   0.02083   0   0   0    0
 !  Scale          Shape1      Bov      Str1      Str2      Str3   Strain-Model
  0.2086848E-02   0.00000   0.00000   0.00000   0.00000   0.00000       0
       21.00000     0.000     0.000     0.000     0.000     0.000
-!       U            V            W             X            Y         GauSiz      LorSiz    Size-Model
-     0.007382     0.000000     0.000000     0.000000     0.005090     0.000000     0.000000       0
-       391.00         0.00         0.00         0.00       410.01         0.00         0.00
+!       U         V          W           X          Y        GauSiz   LorSiz Size-Model
+   0.007382   0.000000   0.000000   0.000000   0.005090   0.000000   0.000000    0
+    391.000      0.000      0.000      0.000    410.010      0.000      0.000
 !     a          b         c        alpha      beta       gamma      #Cell Info
    4.049201   4.049201   4.049201  90.000000  90.000000  90.000000   
   351.00000  351.00000  351.00000    0.00000    0.00000    0.00000

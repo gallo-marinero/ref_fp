@@ -1,0 +1,16 @@
+!Instrument Resolution Function of the diffractometer ALBA NOTOS July2022 Si_11keV_f00009.dat MR20220827
+!Radiation Cu  RES=1
+!     Lambda1    Lambda2   Ratio(I2/I1)
+WAVE  1.126980 1.126980  0.0000
+!    NPROF    Shape1    Shape2   Shape3
+PROF    7        0.0       0.0      0.0
+!  Cos(2thM)^2 for polarization = 0 for neutrons
+CTHM  0.7999
+!     2theta-min   step   2theta-max
+THRG     11.1265   0.006001    59.0185
+!       S_L        D_L
+ASYM   0.000       0.000
+!   Uins          Vins       Wins       Xins        Yins       Zins
+     0.004997    -0.000109     0.000768     0.023717  0.00000   0.000000 0.0
+
+

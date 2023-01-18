@@ -1,20 +1,20 @@
 COMM    Phases    extracted    from    file:    14LFPka_f00003.xye.buf
-!    Files    =>    DAT-file:    .\EXP_PATTERN.xye,    PCR-file:    .\FP_INPUT
-!Job    Npr    Nph    Nba    Nex    Nsc    Nor    Dum    Iwg    Ilo    Ias    Res    Ste    Nre    Cry    Uni    Cor    Opt    Aut
+! Files => DAT-file: EXP_PATTERN,  PCR-file: /home/gallo/work/models_cic/ref-fp/files/simulations/1_FP_INPUT
+!Job Npr Nph Nba Nex Nsc Nor Dum Iwg Ilo Ias Res Ste Nre Cry Uni Cor Opt Aut
    2   7   2  30   1   0   1   0   0   0   0   1   1   0   0   0   0   0   1
 !
-!    Resolution    file    for    Pattern#    1
-C:/Users/oarcelus/OneDrive    -    CIC    energiGUNE/Desktop/testfullprofapp/LiFePO4/IRF_NOTOS_July2022_MR.irf
-!Ipr    Ppl    Ioc    Mat    Pcr    Ls1    Ls2    Ls3    NLI    Prf    Ins    Rpa    Sym    Hkl    Fou    Sho    Ana
+!  Resolution file for Pattern#   1
+/home/gallo/work/models_cic/ref-fp/files/IRF_NOTOS_July2022_MR.irf
+!Ipr Ppl Ioc Mat Pcr Ls1 Ls2 Ls3 NLI Prf Ins Rpa Sym Hkl Fou Sho Ana
    2   2   1   0   1   0   4   0   0   3  10  -1   0   0   0   0   0
 !
-!    Lambda1    Lambda2    Ratio    Bkpos    Wdt    Cthm    muR    AsyLim    Rpolarz    2nd-muR    ->    Patt#    1
+! Lambda1  Lambda2    Ratio    Bkpos    Wdt    Cthm     muR   AsyLim   Rpolarz  2nd-muR -> Patt# 1
  1.126980 1.126980  0.00000   40.000 15.0000  0.7999  0.0000  180.00    0.0000  0.0000
 !
-!NCY    Eps    R_at    R_an    R_pr    R_gl    Thmin    Step    Thmax    PSD    Sent0
+!NCY  Eps  R_at  R_an  R_pr  R_gl     Thmin       Step       Thmax    PSD    Sent0
   1  0.10  1.00  1.00  1.00  1.00     11.1265   0.006001    59.0185   0.000   0.000
 !
-!2Theta/TOF/E(Kev)    Background    for    Pattern#    1
+!2Theta/TOF/E(Kev)   Background  for Pattern#  1
         12.7225      2666.4236         41.00
         14.3185      3422.0898         51.00
         15.9145      3705.8818         61.00
@@ -46,76 +46,75 @@ C:/Users/oarcelus/OneDrive    -    CIC    energiGUNE/Desktop/testfullprofapp/LiF
         57.4105       389.9774        321.00
         59.0065       319.5402        331.00
 ! 
-!    Excluded    regions    (LowT    HighT)    for    Pattern#    1
+! Excluded regions (LowT  HighT) for Pattern#  1
         0.00       11.50
 ! 
 !
-58    !Number    of    refined    parameters
+      58    !Number of refined parameters
 !
 !  Zero    Code    SyCos    Code   SySin    Code  Lambda     Code MORE ->Patt# 1
-0.01128   31.0   -0.04363   0.0   0.03904   0.0   0.000000   0.00   0
-!    Zero    Code    SyCos    Code    SySin    Code    Lambda    Code    MORE    ->Patt#    1
+  0.01737   31.0  0.04833    0.0  0.03195    0.0 0.000000    0.00   0
 !-------------------------------------------------------------------------------
-!    Data    for    PHASE    number:    1    ==>    Current    R_Bragg    for    Pattern#    1:    0.0000
+!  Data for PHASE number:   1  ==> Current R_Bragg for Pattern#  1:   0.0000
 !-------------------------------------------------------------------------------
 cod-1101111.cif
 !
-!Nat    Dis    Ang    Pr1    Pr2    Pr3    Jbt    Irf    Isy    Str    Furth    ATZ    Nvk    Npr    More
+!Nat Dis Ang Pr1 Pr2 Pr3 Jbt Irf Isy Str Furth       ATZ    Nvk Npr More
    6   0   0 0.0 0.0 1.0   0   0   0   0   0        631.037   0   7   0
 !
 !
-P    n    m    a    <--Space    group    symbol
-!Atom    Typ    X    Y    Z    Biso    Occ    In    Fin    N_t    Spc    /Codes
-Fe1    Fe    -0.02887    0.25000    0.00448    0.78607    0.50000    0    0    0    0
+P n m a                  <--Space group symbol
+!Atom   Typ       X        Y        Z     Biso       Occ     In Fin N_t Spc /Codes
+Fe1    Fe     -0.00886  0.25000  0.04509  0.59795   0.50000   0   0   0    0  
                 421.00     0.00   441.00   531.00      0.00
 Li1    Li      0.00000  0.00000  0.00000  1.00000   0.50000   0   0   0    0  
                   0.00     0.00     0.00     0.00      0.00
-P1    P    -0.02926    0.25000    -0.00667    1.10353    0.50000    0    0    0    0
+P1     P       0.04554  0.25000  0.02133  0.09607   0.50000   0   0   0    0  
                 451.00     0.00   471.00   561.00      0.00
-O1    O    -0.04725    0.25000    -0.01531    0.62244    0.50000    0    0    0    0
+O1     O      -0.04269  0.25000 -0.01324  1.16305   0.50000   0   0   0    0  
                 481.00     0.00   501.00   581.00      0.00
-O2    O    0.03066    0.25000    0.0156    0.07347    0.50000    0    0    0    0
+O2     O       0.03690  0.25000 -0.02139  1.31397   0.50000   0   0   0    0  
                 511.00     0.00   521.00   571.00      0.00
-O3    O    0.03435    0.04282    -0.03896    0.91624    1.00000    0    0    0    0
+O3     O       0.00904  0.03405 -0.04788  0.55185   1.00000   0   0   0    0  
                 491.00   461.00   431.00   551.00      0.00
-!------->    Profile    Parameters    for    Pattern    #    1    ---->    Phase    #    1
+!-------> Profile Parameters for Pattern #   1  ----> Phase #   1
 !  Scale          Shape1      Bov      Str1      Str2      Str3   Strain-Model
-6.486750724490283e-08     0.00000     0.00000     0.00000     0.00000     0.00000     0
+ 0.3185521E-07   0.00000   0.00000   0.00000   0.00000   0.00000       0
       11.00000     0.000     0.000     0.000     0.000     0.000
-!       U            V            W             X            Y         GauSiz      LorSiz    Size-Model
-     0.31005     0.000000     0.000000     0.000000     0.21924     0.000000     0.000000     0
-       381.00         0.00         0.00         0.00       401.00         0.00         0.00
+!       U         V          W           X          Y        GauSiz   LorSiz Size-Model
+   0.023070   0.000000   0.000000   0.000000   0.171770   0.000000   0.000000    0
+    381.000      0.000      0.000      0.000    401.000      0.000      0.000
 !     a          b         c        alpha      beta       gamma      #Cell Info
-     9.56438  5.83623  4.46023  90.000000  90.000000  90.000000
+  11.019680   6.513760   4.667830  90.000000  90.000000  90.000000   
   341.00000  361.00000  371.00000    0.00000    0.00000    0.00000
 !  Pref1    Pref2      Asy1     Asy2     Asy3     Asy4      S_L      D_L
   1.00000  0.00000  0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
      0.00     0.00     0.00     0.00     0.00     0.00     0.00     0.00
 !-------------------------------------------------------------------------------
-!    Data    for    PHASE    number:    2    ==>    Current    R_Bragg    for    Pattern#    1:    0.0000
+!  Data for PHASE number:   2  ==> Current R_Bragg for Pattern#  1:   0.0000
 !-------------------------------------------------------------------------------
 cod-4313206.cif
 !
-!Nat    Dis    Ang    Pr1    Pr2    Pr3    Jbt    Irf    Isy    Str    Furth    ATZ    Nvk    Npr    More
+!Nat Dis Ang Pr1 Pr2 Pr3 Jbt Irf Isy Str Furth       ATZ    Nvk Npr More
    1   0   0 0.0 0.0 1.0   0   0   0   0   0        107.892   0   7   0
 !
 !
-F    m    -3    m    <--Space    group    symbol
-!Atom    Typ    X    Y    Z    Biso    Occ    In    Fin    N_t    Spc    /Codes
-AL1    Al    0.00000    0.00000    0.00000    0.20361    0.02083    0    0    0    0
+F m -3 m                 <--Space group symbol
+!Atom   Typ       X        Y        Z     Biso       Occ     In Fin N_t Spc /Codes
+AL1    Al      0.00000  0.00000  0.00000  0.59425   0.02083   0   0   0    0  
                   0.00     0.00     0.00   541.00      0.00
-!------->    Profile    Parameters    for    Pattern    #    1    ---->    Phase    #    2
+!-------> Profile Parameters for Pattern #   1  ----> Phase #   2
 !  Scale          Shape1      Bov      Str1      Str2      Str3   Strain-Model
-9.930619509583029e-08     0.00000     0.00000     0.00000     0.00000     0.00000     0
+ 0.1787192E-08   0.00000   0.00000   0.00000   0.00000   0.00000       0
       21.00000     0.000     0.000     0.000     0.000     0.000
-!       U            V            W             X            Y         GauSiz      LorSiz    Size-Model
-     0.34877     0.000000     0.000000     0.000000     0.06784     0.000000     0.000000     0
-       391.00         0.00         0.00         0.00       410.01         0.00         0.00
+!       U         V          W           X          Y        GauSiz   LorSiz Size-Model
+   0.061820   0.000000   0.000000   0.000000   0.261640   0.000000   0.000000    0
+    391.000      0.000      0.000      0.000    410.010      0.000      0.000
 !     a          b         c        alpha      beta       gamma      #Cell Info
-     4.02194  4.02194  4.02194  90.000000  90.000000  90.000000
+   3.863630   3.863630   3.863630  90.000000  90.000000  90.000000   
   351.00000  351.00000  351.00000    0.00000    0.00000    0.00000
 !  Pref1    Pref2      Asy1     Asy2     Asy3     Asy4      S_L      D_L
   1.00000  0.00000  0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
      0.00     0.00     0.00     0.00     0.00     0.00     0.00     0.00
-!    2Th1/TOF1    2Th2/TOF2    Pattern    to    plot
+!  2Th1/TOF1    2Th2/TOF2  Pattern to plot
       11.500      59.019       1
