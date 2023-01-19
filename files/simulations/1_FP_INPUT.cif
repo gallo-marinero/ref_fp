@@ -14,14 +14,14 @@
 # Please notify any error or suggestion to: 
 #           Juan Rodriguez-Carvajal (jrc@ill.eu)
 # Improvements will be progressively added as needed.
-#      Date: 18/01/2023  Time: 18:52:57.381
+#      Date: 19/01/2023  Time: 12:53:46.700
  
  
 #=============================================================================
  data_global
 #=============================================================================
  
-_audit_creation_date  18/01/2023  
+_audit_creation_date  19/01/2023  
 _audit_creation_method  "FullProf Suite"
 # PROCESSING SUMMARY (IUCr Office Use Only)
  
@@ -216,13 +216,13 @@ loop_
 'x,-y+1/2,z'
 'x+1/2,y,-z+1/2'
  
-_cell_length_a                       11.0197
-_cell_length_b                       6.51376
-_cell_length_c                       4.66783
+_cell_length_a                       11.3027
+_cell_length_b                       6.19039
+_cell_length_c                       4.22509
 _cell_angle_alpha                    90.0000
 _cell_angle_beta                     90.0000
 _cell_angle_gamma                    90.0000
-_cell_volume                         335.055
+_cell_volume                         295.622
 _cell_formula_units_Z                ?
 _cell_measurement_temperature        ?
 _cell_special_details
@@ -364,7 +364,7 @@ _pd_proc_ls_prof_echi2                0.0000
 #  Items related to LS refinement
  
 _refine_ls_R_I_factor                 0.0000
-_refine_ls_number_reflns                   189
+_refine_ls_number_reflns                   167
 _refine_ls_number_parameters                58
 _refine_ls_number_restraints                 0
  
@@ -372,8 +372,8 @@ _refine_ls_number_restraints                 0
 # 2theta minimum, maximum and increment (in degrees) are for the 
 # intensities used in the refinement.
  
-_pd_proc_2theta_range_min               11.1091
-_pd_proc_2theta_range_max               59.0011
+_pd_proc_2theta_range_min               11.0839
+_pd_proc_2theta_range_max               58.9759
 _pd_proc_2theta_range_inc              0.006001
 _pd_proc_wavelength                    1.126980
  
@@ -406,12 +406,12 @@ loop_
     _atom_site_occupancy
     _atom_site_adp_type
     _atom_site_type_symbol
- Fe1 -0.0089  0.25000  0.04509  0.00757  1.00000 Uiso Fe    
+ Fe1  0.01885  0.25000  0.04242  0.01336  1.00000 Uiso Fe    
  Li1  0.00000  0.00000  0.00000  0.01267  1.00000 Uiso Li    
- P1  0.04554  0.25000  0.02133  0.00122  1.00000 Uiso P     
- O1 -0.0427  0.25000 -0.0132  0.01473  1.00000 Uiso O     
- O2  0.03690  0.25000 -0.0214  0.01664  1.00000 Uiso O     
- O3  0.00904  0.03405 -0.0479  0.00699  1.00000 Uiso O     
+ P1 -0.0056  0.25000  0.03755  0.01161  1.00000 Uiso P     
+ O1 -0.0168  0.25000  0.04587  0.01152  1.00000 Uiso O     
+ O2 -0.0467  0.25000 -0.0171  0.01461  1.00000 Uiso O     
+ O3  0.04872  0.02663 -0.0406  0.01052  1.00000 Uiso O     
  
 # Note: if the displacement parameters were refined anisotropically
 # the U matrices should be given as for single-crystal studies.
@@ -726,13 +726,13 @@ loop_
 'x,z+1/2,-y+1/2'
 'x,-z+1/2,y+1/2'
  
-_cell_length_a                       3.86363
-_cell_length_b                       3.86363
-_cell_length_c                       3.86363
+_cell_length_a                       3.71577
+_cell_length_b                       3.71577
+_cell_length_c                       3.71577
 _cell_angle_alpha                    90.0000
 _cell_angle_beta                     90.0000
 _cell_angle_gamma                    90.0000
-_cell_volume                         57.6749
+_cell_volume                         51.3034
 _cell_formula_units_Z                ?
 _cell_measurement_temperature        ?
 _cell_special_details
@@ -874,7 +874,7 @@ _pd_proc_ls_prof_echi2                0.0000
 #  Items related to LS refinement
  
 _refine_ls_R_I_factor                 0.0000
-_refine_ls_number_reflns                     6
+_refine_ls_number_reflns                     5
 _refine_ls_number_parameters                58
 _refine_ls_number_restraints                 0
  
@@ -882,8 +882,8 @@ _refine_ls_number_restraints                 0
 # 2theta minimum, maximum and increment (in degrees) are for the 
 # intensities used in the refinement.
  
-_pd_proc_2theta_range_min               11.1091
-_pd_proc_2theta_range_max               59.0011
+_pd_proc_2theta_range_min               11.0839
+_pd_proc_2theta_range_max               58.9759
 _pd_proc_2theta_range_inc              0.006001
 _pd_proc_wavelength                    1.126980
  
@@ -916,7 +916,7 @@ loop_
     _atom_site_occupancy
     _atom_site_adp_type
     _atom_site_type_symbol
- AL1  0.00000  0.00000  0.00000  0.00753  1.00000 Uiso Al    
+ AL1  0.00000  0.00000  0.00000  0.00893  1.00000 Uiso Al    
  
 # Note: if the displacement parameters were refined anisotropically
 # the U matrices should be given as for single-crystal studies.

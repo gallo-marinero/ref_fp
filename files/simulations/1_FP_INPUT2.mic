@@ -2,7 +2,7 @@
 !  ==================================================================
 !  Pattern No:  1 Phase No.:   2 cod-4313206.cif               
 !  Code of PCR-file: /home/gallo/work/models_cic/ref-fp/files/simulations/1_FP_INPUT                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-!  Date and Time   :     Date: 18/01/2023  Time: 18:52:57.381                              
+!  Date and Time   :     Date: 19/01/2023  Time: 12:53:46.700                              
 !  Micro-structural analysis based in the parameters used in the input control file PCR
 !  The values are given for each individual reflection in order to take into account eventual anisotropic broadening
 !  In some cases the comment "<- Resolution limited" appears, this means that the reflection is not broadened
@@ -49,10 +49,9 @@
 !      It is a measure of the degree of anisotropy, not of the estimated error!
 !      
 !    s=1/d     HGo       HGi       HLo       HLi       betaG     betaL      beta    betaVo  App-size Max-strain    h     k     l     twtet/TOF       HpVo     eta     Icalc     Iobs   Beta_TCH
-    0.4483    0.0728    0.0329    0.2766    0.0062    1.0354    6.3648    6.5467    6.7972    157.11   11.5482     1     1     1   29.2641  0.2954  0.9521      0.00      0.00    6.6004
-    0.5176    0.0834    0.0346    0.2808    0.0072    1.1956    6.3648    6.6191    6.8943    157.11   11.5482     2     0     0   33.9183  0.3047  0.9406      0.00      0.00    6.6741
-    0.7321    0.1201    0.0418    0.2980    0.0107    1.6908    6.3648    6.9219    7.2425    157.11   11.5482     2     2     0   48.7253  0.3422  0.9010      0.00      0.00    6.9515
-    0.8584    0.1453    0.0473    0.3120    0.0131    1.9826    6.3648    7.1373    7.4749    157.11   11.5482     3     1     1   57.8563  0.3718  0.8761      0.00      0.00    7.1431
+    0.4661    0.1232    0.0333    0.2245    0.0065    1.8868    5.1186    5.9716    6.1428    195.37   20.2385     1     1     1   30.4562  0.2813  0.8429      0.01      0.01    5.9538
+    0.5382    0.1431    0.0352    0.2284    0.0075    2.1787    5.1186    6.2130    6.3846    195.37   20.2385     2     0     0   35.3114  0.3000  0.8123      0.00      0.00    6.1776
+    0.7612    0.2113    0.0429    0.2442    0.0113    3.0811    5.1186    6.9896    7.1919    195.37   20.2385     2     2     0   50.7988  0.3700  0.7257      0.00      0.00    6.9290
 
-  Average apparent size   and standard deviation (anisotropy):    157.11 (     0.00)
-  Average maximum strain and standard deviation (anisotropy):   11.5482 (   0.0039)
+  Average apparent size   and standard deviation (anisotropy):    195.37 (     0.06)
+  Average maximum strain and standard deviation (anisotropy):   20.2385 (   0.0055)

@@ -25,6 +25,7 @@ sysin={
 x_temp={
         'var_name' : 'x',
         'search_name' : 'X1',
+        'cif' : 'cif',
         'value' : 0.0,
         'new_value' : 0.0,
         'min' : -0.05,
@@ -33,6 +34,7 @@ x_temp={
 y_temp={
         'var_name' : 'y',
         'search_name' : 'Y1',
+        'cif' : 'cif',
         'value' : 0.0,
         'new_value' : 0.0,
         'min' : -0.05,
@@ -41,6 +43,7 @@ y_temp={
 z_temp={
         'var_name' : 'z',
         'search_name' : 'Z1',
+        'cif' : 'cif',
         'value' : 0.0,
         'new_value' : 0.0,
         'min' : -0.05,
@@ -49,6 +52,7 @@ z_temp={
 biso_temp={
         'var_name' : 'biso',
         'search_name' : 'B',
+        'cif' : 'cif',
         'value' : 0.0,
         'new_value' : 0.0,
         'min' : -0.1,

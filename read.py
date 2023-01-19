@@ -67,18 +67,22 @@ with open(sample_f,'r') as f:
         or line.split()[0] in biso:
             if line.split()[0] in x:
                 x_temp['search_name']=line.split()[0]
+                x_temp['cif']=curr_cif
                 x_temp['value']=line.split()[2]
                 x_coord.append(x_temp.copy())
             if line.split()[0] in y:
                 y_temp['search_name']=line.split()[0]
+                y_temp['cif']=curr_cif
                 y_temp['value']=line.split()[3]
                 y_coord.append(y_temp.copy())
             if line.split()[0] in z:
                 z_temp['search_name']=line.split()[0]
+                z_temp['cif']=curr_cif
                 z_temp['value']=line.split()[4]
                 z_coord.append(z_temp.copy())
             if line.split()[0] in biso:
                 biso_temp['search_name']=line.split()[0]
+                biso_temp['cif']=curr_cif
                 biso_temp['value']=line.split()[5]
                 biso_coord.append(biso_temp.copy())
         if 'Scale' in line:
@@ -197,7 +201,7 @@ exp_f.close()
 prf=sample_f.split(".")[0]
 
 sim_folder=os.path.join(os.getcwd(),'simulations/')
-simulations=1
+simulations=10
 # Loop through all the simulations the user wants to run
 for i in range(simulations):
     sim_point=[]
@@ -205,7 +209,7 @@ for i in range(simulations):
 # Append the simulation number to each input filename
     sim_inp=os.path.join(sim_folder+str(i+1)+'_'+sample_f)
     shutil.copy(os.path.join(os.getcwd(),sample_f),sim_inp)
-    write.create_inp(sim_inp,sample_f,opt_vrbls,cif_files)
+    list_vars,dict_vars=write.create_inp(sim_inp,sample_f,opt_vrbls,cif_files,i)
     subprocess.call(['fp2k', sim_inp, 'EXP_PATTERN'])
     with open(os.path.join(sim_folder+str(i+1)+'_'+prf+'.prf')) as sim_f:
         for line in sim_f:
@@ -215,4 +219,5 @@ for i in range(simulations):
                 sim_intensity.append(float(line_split[1]))
     sim_f.close()
     chi=calculate.fig_merit(exp_point,exp_intensity,exp_std,sim_point,sim_intensity)
+    write.ml_input(list_vars,dict_vars,i,chi)
 
