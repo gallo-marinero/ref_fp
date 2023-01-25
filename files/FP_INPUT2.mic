@@ -1,8 +1,8 @@
 !  MICRO-STRUCTURAL ANALYSIS FROM FULLPROF (still under development!)
 !  ==================================================================
 !  Pattern No:  1 Phase No.:   2 cod-4313206.cif               
-!  Code of PCR-file: /home/gallo/work/models_cic/ref-fp/files/simulations/1_FP_INPUT                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-!  Date and Time   :     Date: 25/01/2023  Time: 10:09:43.355                              
+!  Code of PCR-file: FP_INPUT                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+!  Date and Time   :     Date: 25/01/2023  Time: 10:10:20.162                              
 !  Micro-structural analysis based in the parameters used in the input control file PCR
 !  The values are given for each individual reflection in order to take into account eventual anisotropic broadening
 !  In some cases the comment "<- Resolution limited" appears, this means that the reflection is not broadened
@@ -49,11 +49,11 @@
 !      It is a measure of the degree of anisotropy, not of the estimated error!
 !      
 !    s=1/d     HGo       HGi       HLo       HLi       betaG     betaL      beta    betaVo  App-size Max-strain    h     k     l     twtet/TOF       HpVo     eta     Icalc     Iobs   Beta_TCH
-    0.4077    0.1460    0.0319    0.3205    0.0056    2.2852    7.4549    8.3314    8.5005    134.14   28.0271     1     1     1   26.5613  0.3795  0.8802    133.28    133.28    8.3412
-    0.4707    0.1693    0.0334    0.3244    0.0065    2.6387    7.4549    8.6089    8.7663    134.14   28.0271     2     0     0   30.7647  0.3998  0.8536     64.76     64.76    8.5908
-    0.6657    0.2473    0.0393    0.3402    0.0096    3.7317    7.4549    9.5234    9.6740    134.14   28.0271     2     2     0   44.0651  0.4750  0.7743     40.53     40.53    9.4496
-    0.7806    0.2988    0.0437    0.3529    0.0116    4.3758    7.4549   10.0820   10.2482    134.14   28.0271     3     1     1   52.1928  0.5289  0.7320     43.51     43.51    9.9951
-    0.8154    0.3154    0.0453    0.3573    0.0123    4.5704    7.4549   10.2528   10.4255    134.14   28.0271     2     2     2   54.7022  0.5468  0.7199     12.08     12.08   10.1638
+    0.4278    0.0388    0.0324    0.0111    0.0059    0.3414    0.1238    0.4245    0.7986   8076.09    3.9906     1     1     1   27.8951  0.0449  0.3110    223.53    223.53    0.4248
+    0.4939    0.0421    0.0340    0.0122    0.0069    0.3942    0.1238    0.4767    0.8599   8076.09    3.9906     2     0     0   32.3201  0.0488  0.3125     99.26     99.26    0.4773
+    0.6985    0.0547    0.0405    0.0157    0.0102    0.5575    0.1238    0.6388    1.0664   8076.09    3.9906     2     2     0   46.3581  0.0633  0.3109     43.22     43.22    0.6400
+    0.8191    0.0637    0.0454    0.0181    0.0123    0.6537    0.1238    0.7346    1.1962   8076.09    3.9906     3     1     1   54.9736  0.0737  0.3081     35.35     35.35    0.7361
+    0.8555    0.0668    0.0471    0.0189    0.0130    0.6828    0.1238    0.7635    1.2362   8076.09    3.9906     2     2     2   57.6410  0.0771  0.3072      8.97      8.97    0.7651
 
-  Average apparent size   and standard deviation (anisotropy):    134.14 (     0.00)
-  Average maximum strain and standard deviation (anisotropy):   28.0271 (   0.0000)
+  Average apparent size   and standard deviation (anisotropy):   8076.09 (     2.83)
+  Average maximum strain and standard deviation (anisotropy):    3.9906 (   0.0010)

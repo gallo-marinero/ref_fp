@@ -64,8 +64,8 @@ scale_temp={
         'cif' : 'cif',
         'value' : 0.0,
         'new_value' : 0.0,
-        'min' : 1e-07,
-        'max' : 0.0
+        'min' : 1e-04,
+        'max' : 9e-04
 }
 u_temp={
         'var_name' : 'u',
@@ -82,7 +82,7 @@ y_u_temp={
         'cif' : 'cif',
         'value' : 0.0,
         'new_value' : 0.0,
-        'min' : 0.0,
+        'min' : 0.3,
         'max' : 0.5
 }
 abc_temp={

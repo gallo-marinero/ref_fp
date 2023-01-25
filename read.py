@@ -2,13 +2,42 @@ import sys, os, shutil, defaults, write,subprocess,calculate
 from importlib import import_module
 from defaults import *
 
+def read_exp(experiment_f):
+# Read and store the experimental values
+    exp_point=[]
+    exp_intensity=[]
+    exp_std=[]
+    with open(experiment_f,'r') as exp_f:
+        for line in exp_f:
+            line_split=line.split()
+            if len(line_split) == 3:
+                exp_point.append(float(line_split[0]))
+                exp_intensity.append(float(line_split[1]))
+                exp_std.append(float(line_split[2]))
+    exp_f.close()
+    return exp_point, exp_intensity, exp_std
+
+# Read simulated .prf file
+def read_sim(sim_file):
+    sim_point=[]
+    sim_intensity=[]
+    with open(sim_file) as sim_f:
+        for line in sim_f:
+            line_split=line.split()
+            if len(line_split)==5:
+                sim_point.append(float(line_split[0]))
+                sim_intensity.append(float(line_split[1]))
+    sim_f.close()
+    return sim_point, sim_intensity
+
 full_vrbls=[zero,sycos,sysin,x_temp,y_temp,z_temp,biso_temp,scale_temp,\
         u_temp,y_u_temp,abc_temp]
 # Default to optimize all variables
 optimize='all'
 # sample_f: file with measured data
 # optimize: list of strings with the variables to optimize (lower case)'
-vrbls=['experiment_f','sample_f','optimize','x','y','z','biso','scale','u','y_u','abc']
+vrbls=['simulations','experiment_f','sample_f','optimize','x','y','z','biso',\
+        'figure_merit','scale','u','y_u','abc']
 # Read input from file
 # Add path where code is executed to be able to load the input file as a module
 sys.path.append(os.getcwd())
@@ -23,6 +52,7 @@ scale=[]
 u=[]
 y_u=[]
 abc=[]
+figure_merit=False
 # Import variables in input file
 inp_f=__import__(sys.argv[1])
 for i in vrbls:
@@ -30,6 +60,19 @@ for i in vrbls:
     if hasattr(inp_f,i):
 # Update variable
         globals()[i] = getattr(inp_f,i)
+
+# Read experimental file
+prf=sample_f.split(".")[0]
+exp_point, exp_intensity, exp_std=read_exp(experiment_f)
+
+# Evaluate figure of merit for a user specified .prf file
+if figure_merit:
+    print('Evaluating figure of merit for .prf file',figure_merit)
+    print(figure_merit)
+    sim_point,sim_intensity=read_sim(figure_merit)
+    chi,pf,wpf=calculate.fig_merit(exp_point,exp_intensity,exp_std,sim_point,sim_intensity)
+    print(chi)
+    exit()
 
 if optimize == 'all':
 # Default is to optimize all variables 
@@ -186,38 +229,15 @@ for i in range(len(opt_vrbls)):
         print('\n')
         opt_vrbls[i]=abc
 
-# Read and store the experimental values
-exp_point=[]
-exp_intensity=[]
-exp_std=[]
-with open(experiment_f,'r') as exp_f:
-    for line in exp_f:
-        line_split=line.split()
-        if len(line_split) == 3:
-            exp_point.append(float(line_split[0]))
-            exp_intensity.append(float(line_split[1]))
-            exp_std.append(float(line_split[2]))
-exp_f.close()
-prf=sample_f.split(".")[0]
-
 sim_folder=os.path.join(os.getcwd(),'simulations/')
-simulations=10
 # Loop through all the simulations the user wants to run
 for i in range(simulations):
-    sim_point=[]
-    sim_intensity=[]
 # Append the simulation number to each input filename
     sim_inp=os.path.join(sim_folder+str(i+1)+'_'+sample_f)
     shutil.copy(os.path.join(os.getcwd(),sample_f),sim_inp)
     list_vars,dict_vars=write.create_inp(sim_inp,sample_f,opt_vrbls,cif_files,i)
     subprocess.call(['fp2k', sim_inp, 'EXP_PATTERN'])
-    with open(os.path.join(sim_folder+str(i+1)+'_'+prf+'.prf')) as sim_f:
-        for line in sim_f:
-            line_split=line.split()
-            if len(line_split)==5:
-                sim_point.append(float(line_split[0]))
-                sim_intensity.append(float(line_split[1]))
-    sim_f.close()
-    chi=calculate.fig_merit(exp_point,exp_intensity,exp_std,sim_point,sim_intensity)
-    write.ml_input(list_vars,dict_vars,i,chi)
+    sim_point,sim_intensity=read_sim(os.path.join(sim_folder+str(i+1)+'_'+prf+'.prf'))
+    chi,pf,wpf=calculate.fig_merit(exp_point,exp_intensity,exp_std,sim_point,sim_intensity)
+    write.ml_input(list_vars,dict_vars,i,chi,pf,wpf)
 

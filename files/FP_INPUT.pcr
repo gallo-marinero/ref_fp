@@ -1,5 +1,5 @@
 COMM  Phases extracted from file: 14LFPka_f00003.xye.buf
-! Files => DAT-file: EXP_PATTERN,  PCR-file: FP_INPUT
+! Files => DAT-file: EXP_PATTERN.xye,  PCR-file: FP_INPUT
 !Job Npr Nph Nba Nex Nsc Nor Dum Iwg Ilo Ias Res Ste Nre Cry Uni Cor Opt Aut
    2   7   2  30   1   0   1   0   0   0   0   1   1   0   0   0   0   0   1
 !
@@ -12,7 +12,7 @@ COMM  Phases extracted from file: 14LFPka_f00003.xye.buf
  1.126980 1.126980  0.00000   40.000 15.0000  0.7999  0.0000  180.00    0.0000  0.0000
 !
 !NCY  Eps  R_at  R_an  R_pr  R_gl     Thmin       Step       Thmax    PSD    Sent0
-  1  0.10  1.00  1.00  1.00  1.00     11.1265   0.006001    59.0185   0.000   0.000
+  1  0.10  1.00  1.00  1.00  1.00     11.1325   0.006001    59.0185   0.000   0.000
 !
 !2Theta/TOF/E(Kev)   Background  for Pattern#  1
         12.7225      2666.4236         41.00
@@ -47,7 +47,7 @@ COMM  Phases extracted from file: 14LFPka_f00003.xye.buf
         59.0065       319.5402        331.00
 ! 
 ! Excluded regions (LowT  HighT) for Pattern#  1
-        0.00       11.50
+        0.00       11.10
 ! 
 !
       58    !Number of refined parameters

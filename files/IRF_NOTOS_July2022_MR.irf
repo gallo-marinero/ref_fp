@@ -7,7 +7,7 @@ PROF    7        0.0       0.0      0.0
 !  Cos(2thM)^2 for polarization = 0 for neutrons
 CTHM  0.7999
 !     2theta-min   step   2theta-max
-THRG     11.1265   0.006001    59.0185
+THRG   11.1325   0.00599925    59.0185
 !       S_L        D_L
 ASYM   0.000       0.000
 !   Uins          Vins       Wins       Xins        Yins       Zins

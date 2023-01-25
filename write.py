@@ -81,25 +81,30 @@ def rep_abc(line_match,list_vars,cif):
     return '     '+str(line_replace)+'\n'
 
 # Write the file with all the variables that are being refined
-def ml_input(list_vars,dict_vars,sim_num,chi):
-    if sim_num==0:
+def ml_input(list_vars,dict_vars,sim_num,chi,pf,wpf):
 # Print headers only first time
-        with open('ml.dat','w') as ml_f:
-            for i in dict_vars:
-                ml_f.write(i['search_name']+' ')
-            for i in list_vars:
-                for j in i:
-                    ml_f.write(j['var_name']+'_'+j['search_name']+'_'+j['cif']+' ')
-            ml_f.write('chi\n')
-    else:
-        with open('ml.dat','a') as ml_f:
+    ml_f = open('ml.dat','a')
+# Remove the file 'ml.dat' if present
+    if sim_num==0:
+        if os.path.exists('ml.dat'):
+            os.remove('ml.dat')
+        ml_f = open('ml.dat','a')
+        for i in dict_vars:
+            ml_f.write(i['search_name']+' ')
+        for i in list_vars:
+            for j in i:
+                ml_f.write(j['var_name']+'_'+j['search_name']+'_'+j['cif']+' ')
+#        ml_f.write('chi prof_factor wprof_factor\n')
+        ml_f.write('chi \n')
 # Print new values
-            for i in dict_vars:
-                ml_f.write(i['new_value']+' ')
-            for i in list_vars:
-                for j in i:
-                    ml_f.write(j['new_value']+' ')
-            ml_f.write(str(chi)+'\n')
+    for i in dict_vars:
+        ml_f.write(i['new_value']+' ')
+    for i in list_vars:
+        for j in i:
+            ml_f.write(j['new_value']+' ')
+# Print the figures of merit calculated
+#    ml_f.write(str(chi)+' '+str(pf)+' '+str(wpf)+'\n')
+    ml_f.write(str(chi)+'\n')
     ml_f.close()
 
 
